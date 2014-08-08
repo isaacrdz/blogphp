@@ -2,7 +2,7 @@
         <div class="left_content">
             
 <?
-$id=$_GET['n'];
+$id=intval(quitar($_GET['n']));
 $sql=mysql_query("SELECT * FROM post WHERE id=$id");
 $numero = mysql_num_rows($sql);
 if ($numero==0) {

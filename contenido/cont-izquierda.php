@@ -13,7 +13,7 @@
                 <div class="prod_det_box">
                 	<div class="box_top"></div>
                     <div class="box_center">
-                    <div class="prod_title"><? echo $row ['dia'].' '.$row['mes'].' '.$row['ano']; ?></div>
+                    <div class="prod_title"><? echo $row ['dia'].' '.$row['mes'].' '.$row['anio']; ?></div>
                     <hr>
                     <a href=""><h2><? echo $row['titulo']; ?></h2></a>
                     <p class="details"><? echo  $row['contenido']; ?></p>
