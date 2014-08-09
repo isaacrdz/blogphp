@@ -19,10 +19,16 @@ function SINO(cual) {
             <h3>Etiquetas</h3>
             <hr>
             <div>
-              <div class="etiqueta"><a href="#">Etiqueta número 1 (45)</a></div>
-              <div class="etiqueta"><a href="#">Etiquet 2 (21)</a></div>
-              <div class="etiqueta"><a href="#">Etiquet 3 (89)</a></div>
-              <div class="etiqueta"><a href="#">Etiquet 4 (12)</a></div>
+            <?
+              $sql_mostrar_etiquetas = mysql_query("SELECT * FROM etiquetas");
+              while($row = mysql_fetch_array($sql_mostrar_etiquetas)){    
+              $n=$row['id'];
+              $num = mysql_query("SELECT id FROM post WHERE etiquetas = $n ");
+                echo'<div class="etiqueta"><a href="post.php?tag='.$row['id'].'">'.$row['nombre']."(".mysql_num_rows($num).")".'</a></div>';
+              }
+            ?>
+              
+        
             </div>
           </div>
           <div class="anuncio">

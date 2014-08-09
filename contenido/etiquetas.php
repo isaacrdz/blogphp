@@ -1,14 +1,29 @@
 
        	<div class="left_content">
-        	
-            <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Todos los post</div>
+
 <?
-    $sql=mysql_query('SELECT * FROM post ORDER BY id DESC');
+
+    $tag= intval((quitar($_GET['tag'])));
+    $sql=mysql_query("SELECT * FROM post WHERE etiquetas = '$tag'");
+    $sql2=mysql_query("SELECT nombre FROM  etiquetas WHERE id=$tag");
+    $row=mysql_fetch_array($sql2);
+    ?>
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span><?echo $row['nombre']; ?></div>
+    <div class="clear"></div>
+    <?
+    $n = mysql_num_rows($sql);
+    if($n==0){
+        echo "<center>Sin resultados</center>";
+    }else{
+
     while ($row= mysql_fetch_array($sql)) {
-        # code...
+       
     
 ?>
-        	<div class="feat_prod_box">
+          
+          <div class="feat_prod_box">
+
+
                             
                 <div class="prod_det_box">
                 	<div class="box_top"></div>
@@ -38,6 +53,10 @@
             </div>	    
 <?
     }
+    }
 ?>
           <div class="clear"></div>
+<?
+    
+?>
         </div><!--end of left content-->

@@ -10,8 +10,13 @@ include 'comunes/header.php';
      <div class="center_content">
 <?
 if (isset($_GET['n'])) {
+	
 	include 'contenido/post_solo.php';
 	
+}elseif (isset($_GET['tag'])) {
+
+	include 'contenido/etiquetas.php';
+
 }else{
 
 	include 'contenido/cont-izquierda.php';

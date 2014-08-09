@@ -579,3 +579,25 @@ color:#afaeaf;
 	color: #545454;
 	text-decoration: none;
 }
+
+.feat_prod_box_comment{
+padding:10px;
+margin:auto;
+margin-bottom: 25px;
+width: 500px;
+border: 1px solid #a95000;
+border-radius: 5px;
+background: #FFFBF5;
+clear:both;
+}
+
+.comment-de
+{	
+	padding: 5px;
+	border-bottom: 1px #FFD698;
+	margin-bottom: 10px;
+	font-size: 14px;
+	background: #FFFBF5;
+
+
+}
