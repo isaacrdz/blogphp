@@ -3,6 +3,8 @@
             
 <?
 $id=intval(quitar($_GET['n']));
+
+
 $sql=mysql_query("SELECT * FROM post WHERE id=$id");
 $numero = mysql_num_rows($sql);
 if ($numero==0) {
@@ -40,21 +42,28 @@ $row=mysql_fetch_array($sql);
             <div class="clear"></div>
             </div>        
             <div class="clear"></div>
-            <!-- comentario -->
+            <!-- comentarios -->
             <div class="title">
-                <span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Comentarios</div>
+                <span class="title_icon"><img src="images/bullet1.gif" alt="" title="" />
+                </span>Comentarios</div>
+            <div class="clear"></div>
+
+
             <?
-                $sql = mysql_query("SELECT FROM comentarios WHERE post=$id");
-                if(mysql_num_rows($sql)==0) {
-                    echo "No hay comentarios";
-                }
-                while ($row=mysql_fetch_array($sql)){
+
+              $sql = mysql_query("SELECT * FROM comentarios WHERE post = $id ");
+              if(mysql_num_rows($sql)== 0){
+                echo "<center>No hay comentarios </center> ";
+              }
+              while($row = mysql_fetch_array($sql)){
+
+
             ?>
                 <div class="feat_prod_box_comment">
                     <div class="comment-de">
-                       <b><? echo $row['de'] ?></b> el <a href="#"><? echo $row['fecha'] ?></a>
+                       <b> <? echo $row['de'] ?> </b> el <a href="#"> <? echo $row['fecha'] ?></a>
                     </div>
-                    <div class="comentario"><? echo $row['comentario'] ?></div>
+                    <div class="comentario"> <? echo $row['comentario'] ?></div>
                 </div>
             <?
              }

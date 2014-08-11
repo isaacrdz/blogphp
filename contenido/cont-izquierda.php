@@ -1,7 +1,7 @@
 
-       	<div class="left_content">
+    <div class="left_content">
         	
-            <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Todos los post</div>
+    <div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Todos los post</div>
 <?
     $sql=mysql_query('SELECT * FROM post ORDER BY id DESC');
     while ($row= mysql_fetch_array($sql)) {
