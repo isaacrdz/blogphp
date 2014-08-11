@@ -581,23 +581,36 @@ color:#afaeaf;
 }
 
 .feat_prod_box_comment{
-padding:10px;
-margin:auto;
-margin-bottom: 25px;
-width: 500px;
-border: 1px solid #a95000;
-border-radius: 5px;
 background: #FFFBF5;
+border-radius: 5px;
+border: 1px solid #a95000;
 clear:both;
+margin-bottom: 25px;
+margin:1em auto;
+padding:10px;
+width: 500px;
 }
 
 .comment-de
 {	
-	padding: 5px;
-	border-bottom: 1px #FFD698;
-	margin-bottom: 10px;
-	font-size: 14px;
 	background: #FFFBF5;
+	border-bottom: 1px #FFD698;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding: 5px;
 
 
+}
+
+
+#usuario, #email, #comentario
+{
+	width: 100%;
+	margin-top: 7px;
+}
+
+#comentar
+{
+	text-align: right;
+	margin-top: 10px;
 }

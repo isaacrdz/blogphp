@@ -1,4 +1,7 @@
 <?
+session_start();
+
+
 include 'comunes/head.php';
 ?>
 <body>
@@ -10,6 +13,8 @@ include 'comunes/header.php';
      <div class="center_content">
 <?
 if (isset($_GET['n'])) {
+	    $_SESSION['a'] = rand(5,20);
+    	$_SESSION['b'] = rand(5,20);
 	
 	include 'contenido/post_solo.php';
 	

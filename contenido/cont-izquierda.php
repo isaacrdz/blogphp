@@ -5,7 +5,7 @@
 <?
     $sql=mysql_query('SELECT * FROM post ORDER BY id DESC');
     while ($row= mysql_fetch_array($sql)) {
-        # code...
+      
     
 ?>
         	<div class="feat_prod_box">

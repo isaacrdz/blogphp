@@ -1,0 +1,45 @@
+ <html>
+<head>
+<meta charset="utf-8"/>
+<title>Validar formularios con ajax</title>
+<style>
+#texto{
+    font:"Courier New", Courier, monospace;
+    font-size:1em;
+    text-align:justify;
+    width:95%;
+    margin:5px auto;
+    height:auto;
+    border:solid 1px #DADADa;
+    margin-bottom:30px;
+    padding:10px;  
+    }#user{
+    width:200px;
+    border-radius:5px;
+    border:solid 1px #DADADA;
+    padding:10px;
+  
+    }
+#repuesta{
+    float:left;
+    }
+</style>
+<link rel="stylesheet" href="live_examples.css" type="text/css"></link>
+<script type="text/javascript" src="validar.js" >
+</script>
+</head>
+<body>
+<form name='form1'>
+<div id="texto">
+<h1>Validar formularios con ajax</h1>
+<br />
+<br /><h2>Por ahora el usurio que existe es <font color="#FF0000">pedro</font> y <font color="#FF0000">santiago</font></h2>
+<br />
+Nombre de Usuario:<br /> <input type='text' id ='user' name='user' onKeyUp="ejecutarAJAX()">
+<div id='respuesta'></div>
+<input type='submit' value='procesar'>
+</form><br />
+</div>
+</div>
+</body>
+</html>

@@ -11,5 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Book Store</title>
 <link rel="stylesheet" type="text/css" href="css/style2.css" />
+<script src="js/comentar.js"></script>
 
 </head>

@@ -72,4 +72,15 @@ $row=mysql_fetch_array($sql);
 }
 ?>
           <div class="clear"></div>
+               <div class="feat_prod_box_comment">
+                   <input type="text" id="usuario" placeholder="Nombre">
+                   <input type="email" id="email" placeholder="Email">
+                   <input type="hidden" id="post" value="<? echo $id; ?>">
+                   <textarea id="comentario" cols="30" rows="10" placeholder="Comentario"></textarea>
+                   <label for=""><? echo $_SESSION['a']." + ".$_SESSION['b']; ?> = <input type="text" style="width:20px;" id="capt"></label> <br>
+                   <button id="comentar" onclick="javascript:enviar_comentario();">Comentar</button>
+                   <span id="respuesta"></span>
+               </div>
+
+          <div class="clear"></div>
         </div><!--end of left content-->

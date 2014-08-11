@@ -1,4 +1,6 @@
 <?
+
+session_start();
 include 'comunes/head.php';
 ?>
 <body>
