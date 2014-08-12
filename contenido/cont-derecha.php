@@ -34,24 +34,31 @@ function SINO(cual) {
           <div class="anuncio">
             <h3>Titulo</h3>
             <hr>
+
             <div>
-              <h4 style="cursor:pointer;" onclick="SINO(2013);">► 2013</h4>
-              <div style="display:none;" id="2013">
+            <?
+              for ($i=date("Y"); $i >=2010; $i--) { 
+
+            ?>
+              <h4 style="cursor:pointer;" onclick="SINO(<? echo $i;  ?>);">► <? echo $i;  ?></h4>
+              <div style="display:none;" id="<? echo $i;  ?>">
                 <ol>
-                  <li>ddkdkf kfkmg</li>
-                  <li>kckjf kfjf</li>
+            <?
+            $sql = mysql_query("SELECT titulo, anio, id  FROM post WHERE anio = $i");
+            while ($row=mysql_fetch_array($sql)){            
+              ?>
+              <li>   <a href="post.php?n=<?echo $row['id'] ;?>"> <? echo $row["titulo"]; ?></a>   </li>
+              <?
+                 }
+              ?>
                 </ol>
               </div>
+
+              <?
+                 }
+              ?>
             </div>
-            <div>
-              <h4 style="cursor:pointer;" onclick="SINO(2012);">► 2012</h4>
-              <div style="display:none;" id="2012">
-                <ol>
-                  <li>ddkdkf kfkmg</li>
-                  <li>kckjf kfjf</li>
-                </ol>
-              </div>
             </div>
-          </div>
+              
         
         </div><!--end of right content-->

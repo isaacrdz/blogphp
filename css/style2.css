@@ -614,3 +614,29 @@ width: 500px;
 	text-align: right;
 	margin-top: 10px;
 }
+
+.pagination li 
+{
+	list-style: none;
+	display: inline;
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.pagination a
+{
+	color:#378BFF;
+	text-decoration: 
+
+}
+
+.pagination a:hover
+{
+	color: #004FBB;
+}
+
+.pagination li.ant a
+{
+	font-size: 14px;
+	color:black;
+}

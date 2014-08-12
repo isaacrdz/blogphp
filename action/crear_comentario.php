@@ -16,10 +16,11 @@
 		$email = quitar($_GET['email']);
 		$post = quitar($_GET['post']);
 		$comentario = quitar($_GET['comentario']);
-		$fecha = date("d")." de ".date("m")." de ".date("y");
+		$fecha = date("d")." de ".mes(date("m"))." de ".date("Y")." a las " . date("h:i");
+		$ip = get_ip();
  		$sql = mysql_query("
 			INSERT INTO `comentarios`( `de`, `comentario`, `fecha`, `email`, `activo`, `ip`, `post`) 
-			VALUES ('$user','$comentario','$fecha','$email','1','111.111.11.1','$post')
+			VALUES ('$user','$comentario','$fecha','$email','1','$ip','$post')
 			");
  	if($sql){
  		echo "Gracias por su comentario";
